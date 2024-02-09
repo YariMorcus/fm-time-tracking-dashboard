@@ -5,7 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel serve src/*.html --no-cache",
-    "build": "parcel build  --dist-dir src/*.html"
+    "build": "parcel build  --dist-dir ./dist src/*.html"
   },
   "repository": {
     "type": "git",

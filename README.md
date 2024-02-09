@@ -14,18 +14,21 @@ Preview of the challenge.
 
 _Source: [time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)_
 
-[//]: # 'In case of netlify: insert deployment status below including **Deployment status** label'
-
 ## Table of contents
 
 - [Frontend Mentor - Time tracking dashboard](#frontend-mentor---time-tracking-dashboard)
   - [Preview](#preview)
   - [Table of contents](#table-of-contents)
+  - [Deployment status](#deployment-status)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
       - [Expected behavior](#expected-behavior)
     - [Links](#links)
   - [Author](#author)
+
+## Deployment status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/28e34282-187e-41ed-984e-575aab63609f/deploy-status)](https://app.netlify.com/sites/time-tracking-dashboard-yari-morcus/deploys)
 
 ## Overview
 

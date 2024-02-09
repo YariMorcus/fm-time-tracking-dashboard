@@ -1,0 +1,8 @@
+// Forward card file when _index.scss is @used
+@forward 'card';
+
+// Forward cardLinks file when _index.scss is @used
+@forward 'cardLinks';
+
+// Forward cardReport file when _index.scss is @used
+@forward 'cardReport';

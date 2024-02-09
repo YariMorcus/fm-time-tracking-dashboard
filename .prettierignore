@@ -1,0 +1,3 @@
+# Ignore artifacts:
+src/assets/scss/abstracts/_variables.scss
+**/*.html

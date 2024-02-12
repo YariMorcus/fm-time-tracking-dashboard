@@ -24,6 +24,9 @@ _Source: [time tracking dashboard challenge on Frontend Mentor](https://www.fron
     - [The challenge](#the-challenge)
       - [Expected behavior](#expected-behavior)
     - [Links](#links)
+  - [Project information](#project-information)
+    - [User stories and features](#user-stories-and-features)
+    - [Flowchart](#flowchart)
   - [Author](#author)
 
 ## Deployment status
@@ -50,12 +53,31 @@ The users should be able to:
 - Solution URL: [Open GitHub repository](https://github.com/YariMorcus/fm-time-tracking-dashboard)
 
 [//]: # 'Insert following when online: - Live Site URL: [open Netlify / GitHub page][fill in link]'
-[//]: # '## Project information'
-[//]: # '### User stories and features'
-[//]: # '1. As a user I want to generate a new piece of advice so I might be able to learn something from it'
-[//]: # '**Feature**: A button that generates a new piece of advice based on an API call'
-[//]: # 'Optional: ### Flowchart'
-[//]: # 'Optional: insert flowchart link below'
+
+## Project information
+
+### User stories and features
+
+1. As a user I want to be able to switch between daily, weekly, and monthly stats. This so I can get a clear picture of the separate times.
+
+   **Features**
+
+   |     |                                                                                       |
+   | --- | ------------------------------------------------------------------------------------- |
+   | 1   | A link that makes it possible to switch to the daily stats                            |
+   | 2   | A link that makes it possible to switch to the weekly stats                           |
+   | 3   | A link that makes it possible to switch to the monthly stats                          |
+   | 4   | Based on the active time frame, the text of the previous period's time will change \* |
+
+\* _Explanation_
+
+- For daily: yesterday _(e.g. Yesterday - 2hrs)_
+- For weekly: last week _(e.g. Last week - 32hrs)_
+- For montly: Last month _(e.g. Last month - 19hrs)_
+
+### Flowchart
+
+![Flowchart of the time tracking dashboard app](flowchart.png)
 
 ## Author
 

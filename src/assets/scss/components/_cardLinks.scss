@@ -1,0 +1,12 @@
+// Import variables
+@use '../abstracts/variables' as v;
+
+// Import mixins
+@use '../abstracts/mixins' as m;
+
+@use '../base/typography' as t;
+
+.nav {
+  margin: 0 auto 2rem;
+  max-width: 33rem;
+}

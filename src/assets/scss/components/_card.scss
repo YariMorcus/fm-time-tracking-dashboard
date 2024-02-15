@@ -1,0 +1,57 @@
+// Import variables
+@use '../abstracts/variables' as v;
+
+// Import mixins
+@use '../abstracts/mixins' as m;
+
+@use '../base/typography' as t;
+
+.card {
+  margin: 0 auto 2rem;
+  padding: 2.3rem 2.5rem 2rem;
+  max-width: 330px;
+  background-color: v.$dark-blue;
+  border-radius: 1.5rem;
+
+  &__header {
+    position: relative;
+  }
+
+  &__title,
+  &__hours {
+    color: v.$white;
+  }
+
+  &__title {
+    font-size: t.$font-size-card-titles;
+    font-weight: 500;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 2.1rem;
+    height: 0.5rem;
+    background: url('../img/icon-ellipsis-min.svg') no-repeat v.$dark-blue;
+    border: none;
+    transform: translateY(-50%);
+  }
+
+  &__time-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__hours {
+    font-size: t.$font-size-hours;
+    font-weight: 300;
+  }
+
+  &__last-time {
+    color: v.$pale-blue;
+    font-size: t.$font-size-last-time;
+    font-weight: 300;
+  }
+}

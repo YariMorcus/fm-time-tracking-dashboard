@@ -6,6 +6,26 @@
 
 @use '../base/typography' as t;
 
+/*
+* TABLE OF CONTENTS
+*
+* 1 - General
+* 2 - Card Work
+* 3 - Card Play
+* 4 - Card Study
+* 5 - Card Exercise
+* 6 - Card Social
+* 7 - Card Self Care
+*
+*/
+
+/*
+****
+* 1 - General
+***
+* Section contains the general CSS for the cards
+*/
+
 .card {
   margin: 0 auto 2rem;
   padding: 2.3rem 2.5rem 2rem;
@@ -55,3 +75,10 @@
     font-weight: 300;
   }
 }
+
+/*
+***
+* 2 - Card work
+***
+* CSS applies correct color header to work card
+*/

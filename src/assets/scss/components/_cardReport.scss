@@ -1,0 +1,68 @@
+// Import variables
+@use '../abstracts/variables' as v;
+
+// Import mixins
+@use '../abstracts/mixins' as m;
+
+@use '../base/typography' as t;
+
+.report-for {
+  display: grid;
+  grid-template-areas: 'report-header' 'report-nav';
+  margin: 0 auto 2rem;
+  max-width: 33rem;
+  background-color: v.$dark-blue;
+  border-radius: 1.5rem;
+
+  &__header {
+    grid-area: report-header;
+    display: grid;
+    grid-template-areas:
+      'report-avatar report-heading'
+      'report-avatar report-name'
+      'report-nav report-nav';
+    grid-template-columns: 7rem 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: end;
+    padding: 3rem 2.5rem;
+    background-color: v.$blue;
+    border-radius: 1.5rem;
+  }
+
+  &__avatar {
+    grid-area: report-avatar;
+    border: 0.2rem solid v.$white;
+    border-radius: 100%;
+  }
+
+  &__heading {
+    grid-area: report-heading;
+    color: v.$pale-blue;
+    font-size: t.$font-size-report-for-heading;
+    font-weight: 400;
+  }
+
+  &__name {
+    grid-area: report-name;
+    color: v.$white;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  &__nav {
+    grid-area: report-nav;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3.5rem;
+  }
+
+  &__nav-button {
+    color: v.$desaturated-blue;
+    background: none;
+    border: none;
+
+    &.is-active {
+      color: v.$white;
+    }
+  }
+}

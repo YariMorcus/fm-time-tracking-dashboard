@@ -27,11 +27,24 @@
 */
 
 .card {
-  margin: 0 auto 2rem;
+  position: relative;
+  margin: 0 auto 6rem;
   padding: 2.3rem 2.5rem 2rem;
   max-width: 33rem;
   background-color: v.$dark-blue;
   border-radius: 1.5rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    z-index: -1;
+  }
 
   &__header {
     position: relative;
@@ -78,7 +91,66 @@
 
 /*
 ***
-* 2 - Card work
+* 2 - Card Work
 ***
-* CSS applies correct color header to work card
+* CSS applies correct color header and image to work card
 */
+
+.work::after {
+  background: url('../img/icon-work-min.svg') 91% -1rem no-repeat v.$salmon;
+}
+
+/*
+***
+* 3 - Card Play
+***
+* CSS applies correct color header and image to play card
+*/
+
+.play::after {
+  background: url('../img/icon-play-min.svg') 91% -0.3rem no-repeat v.$picton-blue;
+}
+
+/*
+***
+* 4 - Card Study
+***
+* CSS applies correct color header and image to study card
+*/
+
+.study::after {
+  background: url('../img/icon-study-min.svg') 92% -0.5rem no-repeat v.$wild-watermelon;
+}
+
+/*
+***
+* 5 - Card Exercise
+***
+* CSS applies correct color header and image to exercise card
+*/
+
+.exercise::after {
+  background: url('../img/icon-exercise-min.svg') 93% -0.1rem no-repeat v.$emerald;
+}
+
+/*
+***
+* 6 - Card Social
+***
+* CSS applies correct color header and image to social card
+*/
+
+.social::after {
+  background: url('../img/icon-social-min.svg') 94% -1.3rem no-repeat v.$purple-heart;
+}
+
+/*
+***
+* 7 - Card Self Care
+***
+* CSS applies correct color header and image to self-care card
+*/
+
+.self-care::after {
+  background: url('../img/icon-self-care-min.svg') 94% -0.8rem no-repeat v.$cream-can;
+}

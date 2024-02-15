@@ -43,52 +43,76 @@
             </header> <!-- .report-for__header -->
             <nav class="report-for__nav">
                 <button class="report-for__nav-button">Daily</button>
-                <button class="report-for__nav-button">Weekly</button>
+                <button class="report-for__nav-button is-active">Weekly</button>
                 <button class="report-for__nav-button">Monthly</button>
             </nav> <!-- .report-for__nav -->
         </article> <!-- .report-for -->
 
 
         <article class="card work">
-            <h2 class="card__title">Work</h2>
-            <button class="card__button" aria-label="Settings (no function attached)"></button>
-            <time class="card__hours" datetime="PT32H">32hrs</time>
-            <span class="card__last-time">Last week - <time datetime="PT36H">36hrs</time></span>
+            <header class="card__header">
+                <h2 class="card__title">Work</h2>
+                <button class="card__button" aria-label="Settings (no function attached)"></button>
+            </header>
+            <div class="card__time-container">
+                <time class="card__hours" datetime="PT32H">32hrs</time>
+                <span class="card__last-time">Last week - <time datetime="PT36H">36hrs</time></span>
+            </div> <!-- .card__time-container -->
         </article> <!-- .work -->
 
         <article class="card play">
-            <h2 class="card__title">Play</h2>
-            <button class="card__button" aria-label="Settings (no function attached)"></button>
-            <time class="card__hours" datetime="PT10H">10hrs</time>
-            <span class="card__last-time">Last week - <time datetime="PT8H">8hrs</time></span>
+            <div class="card__header">
+                <h2 class="card__title">Play</h2>
+                <button class="card__button" aria-label="Settings (no function attached)"></button>
+            </div>
+            <div class="card__time-container">
+                <time class="card__hours" datetime="PT10H">10hrs</time>
+                <span class="card__last-time">Last week - <time datetime="PT8H">8hrs</time></span>
+            </div> <!-- .card__time-container -->
         </article> <!-- .play -->
 
         <article class="card study">
-            <h2 class="card__title">Study</h2>
-            <button class="card__button" aria-label="Settings (no function attached)"></button>
-            <time class="card__hours" datetime="PT4H">4hrs</time>
-            <span class="card__last-time">Last week - <time datetime="PT7H">7hrs</time></span>
+            <div class="card__header">
+                <h2 class="card__title">Study</h2>
+                <button class="card__button" aria-label="Settings (no function attached)"></button>
+            </div>
+            <div class="card__time-container">
+                <time class="card__hours" datetime="PT4H">4hrs</time>
+                <span class="card__last-time">Last week - <time datetime="PT7H">7hrs</time></span>
+            </div> <!-- .card__time-container -->
         </article> <!-- .study -->
 
         <article class="card exercise">
-            <h2 class="card__title">Exercise</h2>
-            <button class="card__button" aria-label="Settings (no function attached)"></button>
-            <time class="card__hours" datetime="PT4H">4hrs</time>
-            <span class="card__last-time">Last week - <time datetime="PT5H">5hrs</time></span>
+            <div class="card__header">
+                <h2 class="card__title">Exercise</h2>
+                <button class="card__button" aria-label="Settings (no function attached)"></button>
+            </div>
+            <div class="card__time-container">
+                <time class="card__hours" datetime="PT4H">4hrs</time>
+                <span class="card__last-time">Last week - <time datetime="PT5H">5hrs</time></span>
+            </div> <!-- .card__time-container -->
         </article> <!-- .exercise -->
 
         <article class="card social">
-            <h2 class="card__title">Social</h2>
-            <button class="card__button" aria-label="Settings (no function attached)"></button>
-            <time class="card__hours" datetime="PT5H">5hrs</time>
-            <span class="card__last-time">Last week - <time datetime="PT10H">10hrs</time></span>
+            <div class="card__header">
+                <h2 class="card__title">Social</h2>
+                <button class="card__button" aria-label="Settings (no function attached)"></button>
+            </div>
+            <div class="card__time-container">
+                <time class="card__hours" datetime="PT5H">5hrs</time>
+                <span class="card__last-time">Last week - <time datetime="PT10H">10hrs</time></span>
+            </div> <!-- .card__time-container -->
         </article> <!-- .social -->
 
         <article class="card self-care">
-            <h2 class="card__title">Self care</h2>
-            <button class="card__button" aria-label="Settings (no function attached)"></button>
-            <time class="card__hours" datetime="PT2H">2hrs</time>
-            <span class="card__last-time">Last week - <time datetime="PT2H">2hrs</time></span>
+            <div class="card__header">
+                <h2 class="card__title">Self care</h2>
+                <button class="card__button" aria-label="Settings (no function attached)"></button>
+            </div>
+            <div class="card__time-container">
+                <time class="card__hours" datetime="PT2H">2hrs</time>
+                <span class="card__last-time">Last week - <time datetime="PT2H">2hrs</time></span>
+            </div> <!-- .card__time-container -->
         </article> <!-- .self-care -->
     </main> <!-- .dashboard -->
 

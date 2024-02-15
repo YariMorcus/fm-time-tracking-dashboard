@@ -23,11 +23,12 @@ body {
   text-rendering: optimizeSpeed;
   font-family: 'Rubik', sans-serif;
   line-height: 1.5;
+  font-size: 1.8rem;
+  background-color: v.$very-dark-blue;
 }
 
 main {
-  display: flex;
-  align-items: center;
+  margin-top: 8rem;
   flex: 1;
 }
 

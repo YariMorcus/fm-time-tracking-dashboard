@@ -57,18 +57,23 @@ img {
 
 .footer {
   padding: 0 1.28rem 1.28rem;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 1.2rem;
+  color: v.$footer-text-color;
   text-align: center;
 
-  // &__link {
-  //   &:hover {
-  //   }
+  &__link {
+    color: v.$footer-link-text-color;
 
-  //   &:focus-visible {
-  //     border-radius: 1px;
-  //   }
-  // }
+    &:hover {
+      color: v.$footer-link-text-color-hover;
+    }
+
+    &:focus-visible {
+      border-radius: 1px;
+      outline: 0.2rem solid v.$footer-link-focus-visible-color;
+    }
+  }
 }
 
 // .noscript {
@@ -78,7 +83,7 @@ img {
 //   text-align: center;
 //   border-bottom: 1px solid;
 
-//   @include m.breakpoint-md() {
+//   @include m.breakpoint-lg() {
 //     padding: 2rem 0;
 //   }
 // }

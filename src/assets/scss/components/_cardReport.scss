@@ -35,7 +35,7 @@
         'report-heading'
         'report-name';
       grid-template-columns: 1fr;
-      padding: 3rem 3rem 6rem;
+      padding: 3rem 3rem 5rem;
     }
   }
 
@@ -74,7 +74,7 @@
     grid-area: report-nav;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 3.5rem;
+    padding: 3rem 3.5rem;
 
     @include m.breakpoint-lg() {
       flex-direction: column;

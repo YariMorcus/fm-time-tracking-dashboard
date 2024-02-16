@@ -1,0 +1,17 @@
+// Import mixins
+@use '../abstracts/mixins' as m;
+
+.dashboard {
+  @include m.breakpoint-lg() {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 24rem);
+    grid-template-areas:
+      'report-for card-work card-play card-study'
+      'report-for card-exercise card-social card-self-care';
+    align-content: center;
+    gap: 3rem;
+    margin: 0 auto;
+    max-width: 110rem;
+  }
+}

@@ -9,6 +9,7 @@
 .report-for {
   display: grid;
   grid-template-areas: 'report-header' 'report-nav';
+  grid-area: report-for;
   margin: 0 auto 6rem;
   max-width: 33rem;
   background-color: v.$dark-blue;
@@ -27,12 +28,27 @@
     padding: 3rem 2.5rem;
     background-color: v.$blue;
     border-radius: 1.5rem;
+
+    @include m.breakpoint-lg() {
+      grid-template-areas:
+        'report-avatar'
+        'report-heading'
+        'report-name';
+      grid-template-columns: 1fr;
+      padding: 3rem 3rem 6rem;
+    }
   }
 
   &__avatar {
     grid-area: report-avatar;
     border: 0.2rem solid v.$white;
     border-radius: 100%;
+
+    @include m.breakpoint-lg() {
+      align-self: start;
+      margin-bottom: 4rem;
+      max-width: 8rem;
+    }
   }
 
   &__heading {
@@ -44,9 +60,14 @@
 
   &__name {
     grid-area: report-name;
+    align-self: start;
     color: v.$white;
     font-size: 2.5rem;
     font-weight: 300;
+
+    @include m.breakpoint-lg() {
+      font-size: 4rem;
+    }
   }
 
   &__nav {
@@ -54,6 +75,12 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem 3.5rem;
+
+    @include m.breakpoint-lg() {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
   }
 
   &__nav-button {
@@ -64,5 +91,11 @@
     &.is-active {
       color: v.$white;
     }
+  }
+
+  @include m.breakpoint-lg() {
+    grid-template-areas: 'report-header' 'report-header' 'report-nav';
+    grid-template-rows: repeat(2, max-content);
+    margin-bottom: 0;
   }
 }

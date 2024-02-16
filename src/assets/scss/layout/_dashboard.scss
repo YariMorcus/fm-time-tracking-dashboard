@@ -2,8 +2,22 @@
 @use '../abstracts/mixins' as m;
 
 .dashboard {
-  @include m.breakpoint-lg() {
+  @include m.breakpoint-md() {
     display: grid;
+    grid-template-areas:
+      'report-for .'
+      'card-work card-play'
+      'card-study card-exercise'
+      'card-social card-self-care';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 28rem);
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80rem;
+  }
+
+  @include m.breakpoint-lg() {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 24rem);
     grid-template-areas:
@@ -13,5 +27,6 @@
     gap: 3rem;
     margin: 0 auto;
     max-width: 110rem;
+    width: initial; // override tablet version
   }
 }

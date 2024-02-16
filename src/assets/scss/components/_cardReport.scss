@@ -93,9 +93,16 @@
     }
   }
 
+  @include m.breakpoint-md() {
+    align-self: end;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
   @include m.breakpoint-lg() {
     grid-template-areas: 'report-header' 'report-header' 'report-nav';
     grid-template-rows: repeat(2, max-content);
+    align-self: initial;
     margin-bottom: 0;
   }
 }

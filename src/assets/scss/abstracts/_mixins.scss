@@ -5,9 +5,9 @@
   }
 }
 
-// Tablet - 768px
-@mixin breakpoint-md() {
-  @media (min-width: 48rem) {
+// Desktop - 1140px
+@mixin breakpoint-lg() {
+  @media (min-width: 71.25rem) {
     @content;
   }
 }

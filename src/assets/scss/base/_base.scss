@@ -83,14 +83,21 @@ img {
   }
 }
 
-// .noscript {
-//   padding: 2rem 1rem;
-//   font-size: 2rem;
-//   color: v.$light-cyan;
-//   text-align: center;
-//   border-bottom: 1px solid;
+.noscript {
+  margin-bottom: 4rem;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  color: v.$pale-blue;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  border-bottom: 0.1rem solid;
 
-//   @include m.breakpoint-lg() {
-//     padding: 2rem 0;
-//   }
-// }
+  &__text {
+    margin: 0 auto;
+    max-width: 37.5rem;
+  }
+
+  @include m.breakpoint-lg() {
+    padding: 2rem 0;
+  }
+}

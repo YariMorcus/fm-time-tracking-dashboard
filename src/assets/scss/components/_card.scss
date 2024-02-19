@@ -33,6 +33,7 @@
   max-width: 33rem;
   background-color: v.$dark-blue;
   border-radius: 1.5rem;
+  cursor: pointer;
 
   &::after {
     content: '';
@@ -44,6 +45,14 @@
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     z-index: -1;
+  }
+
+  &:hover {
+    background-color: v.$card-hover-background-color;
+
+    &:has(.card__button:hover) {
+      background-color: v.$dark-blue;
+    }
   }
 
   &__header {
@@ -73,6 +82,7 @@
     background: url('../img/icon-ellipsis-min.svg') no-repeat v.$dark-blue;
     border: none;
     transform: translateY(-50%);
+    cursor: pointer;
   }
 
   &__time-container {

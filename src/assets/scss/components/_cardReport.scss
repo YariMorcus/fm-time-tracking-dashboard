@@ -87,8 +87,13 @@
     color: v.$desaturated-blue;
     background: none;
     border: none;
+    cursor: pointer;
 
     &.is-active {
+      color: v.$white;
+    }
+
+    &:hover {
       color: v.$white;
     }
   }

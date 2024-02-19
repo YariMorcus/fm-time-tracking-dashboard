@@ -79,13 +79,23 @@
     right: 0;
     width: 4.4rem;
     height: 4.4rem;
-    background-color: v.$button-card-hover-background-color;
-    mask: url('../img/icon-ellipsis-min.svg') center no-repeat;
+    background-color: transparent;
     border: none;
     transform: translateY(-50%);
     cursor: pointer;
 
-    &:hover {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4.4rem;
+      height: 4.4rem;
+      background-color: v.$button-card-hover-background-color;
+      mask: url('../img/icon-ellipsis-min.svg') center no-repeat;
+    }
+
+    &:hover::after {
       background-color: v.$white;
     }
   }

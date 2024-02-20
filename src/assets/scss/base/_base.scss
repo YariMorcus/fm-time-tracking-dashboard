@@ -6,6 +6,21 @@
 
 @use '../base/typography' as t;
 
+/*
+* TABLE OF CONTENTS
+*
+* 1 - General
+* 2 - Light mode
+*
+*/
+
+/*
+****
+* 1 - General
+***
+* Section contains the general CSS
+*/
+
 /* Set core root defaults */
 html {
   font-size: 10px;
@@ -72,6 +87,11 @@ img {
   &__link {
     color: v.$footer-link-text-color;
 
+    // TODO add visited state
+    // &:visited {
+    //   color: v.$light-mode-footer-link-text-color-visited;
+    // }
+
     &:hover {
       color: v.$footer-link-text-color-hover;
     }
@@ -99,5 +119,40 @@ img {
 
   @include m.breakpoint-lg() {
     padding: 2rem 0;
+  }
+}
+
+/*
+***
+* 2 - Light mode
+***
+* CSS applies the correct colors for light mode
+*/
+
+.light-mode {
+  background-color: v.$light-mode-main-background-color;
+
+  button:focus-visible {
+    outline-color: v.$light-mode-button-focus-visible-outline-color;
+  }
+
+  .footer {
+    color: v.$light-mode-footer-text-color;
+
+    &__link {
+      color: v.$light-mode-footer-link-text-color;
+
+      &:visited {
+        color: v.$light-mode-footer-link-text-color-visited;
+      }
+
+      &:hover {
+        color: v.$light-mode-footer-link-text-color-hover;
+      }
+
+      &:focus-visible {
+        outline-color: v.$light-mode-footer-link-focus-visible-color;
+      }
+    }
   }
 }

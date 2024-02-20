@@ -5,6 +5,20 @@
         1.2 Neutral
         1.3 Buttons
         1.4 Footer
+    2. Colors light mode
+        2.1 General
+        2.2 Buttons
+        2.3 Footer
+        2.4 Report for component
+        2.5 Cards
+            2.5.1 General
+            2.5.2 Card work
+            2.5.3 Card play
+            2.5.4 Card study
+            2.5.5 Card exercise
+            2.5.6 Card social
+            2.5.7 Card self care
+
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
@@ -52,3 +66,114 @@ $footer-text-color:                     $pale-blue;
 $footer-link-text-color:                $pale-blue;
 $footer-link-text-color-hover:          $white;
 $footer-link-focus-visible-color:       $white;
+
+/*------------------------------------------------------------------
+2. Colors light mode
+*/
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.1 General
+*/
+
+$light-mode-main-background-color:                  hsl(0, 0%, 98%);
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.2 Buttons
+*/
+
+$light-mode-button-focus-visible-outline-color:     hsl(0, 0%, 17%);
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.3 Footer
+*/
+
+$light-mode-footer-text-color:                      $very-dark-blue;
+$light-mode-footer-link-text-color:                 $very-dark-blue;
+$light-mode-footer-link-text-color-visited:         hsl(263, 60%, 48%);
+$light-mode-footer-link-text-color-hover:           hsl(235, 28%, 52%);
+$light-mode-footer-link-focus-visible-color:        $light-mode-button-focus-visible-outline-color;
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.4 Report for component
+*/
+
+// General
+$light-mode-report-for-text-color:                                  $light-mode-button-focus-visible-outline-color;
+$light-mode-report-for-background-color:                            hsl(0, 0%, 91%);
+$light-mode-report-for-border-color:                                $light-mode-button-focus-visible-outline-color;
+$light-mode-report-for-box-shadow-color:                            hsl(0, 0%, 56%);
+
+// Avatar
+$light-mode-report-for-avatar-border-color:                         $light-mode-button-focus-visible-outline-color;
+
+// Header
+$light-mode-report-for-header-background-color:                     $light-mode-report-for-background-color;
+
+
+// Navigation buttons
+$light-mode-report-for-nav-button-is-active-outline-color:          hsl(263, 60%, 34%);
+$light-mode-report-for-nav-button-hover-text-color:                 hsl(263, 60%, 58%);
+
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5 Cards
+    2.5.1 General
+*/
+
+$light-mode-card-button-background-color:                       $white;
+$light-mode-card-button-hover-background-color:                 hsl(0, 7%, 84%);
+$light-mode-card-button-focus-visible-outline-color:            $white;
+$light-mode-last-time-text-color:                               $white;
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5.2 Card work
+*/
+
+$light-mode-card-work-background-color:                         hsl(15, 59%, 36%);
+$light-mode-card-work-hover-background-color:                   hsl(15, 59%, 47%);
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5.3 Card play
+*/
+
+$light-mode-card-play-background-color:                         hsl(195, 49%, 29%);
+$light-mode-card-play-hover-background-color:                   hsl(195, 49%, 42%);
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5.4 Card study
+*/
+
+$light-mode-card-study-background-color:                        hsl(348, 83%, 41%);
+$light-mode-card-study-hover-background-color:                  hsl(348, 83%, 48%);
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5.5 Card exercise
+*/
+
+$light-mode-card-exercise-background-color:                     hsl(145, 57%, 35%);
+$light-mode-card-exercise-hover-background-color:               hsl(145, 57%, 42%);
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5.6 Card social
+*/
+
+$light-mode-card-social-background-color:                       $light-mode-report-for-nav-button-is-active-outline-color;
+$light-mode-card-social-hover-background-color:                 $light-mode-footer-link-text-color-visited;
+
+/*------------------------------------------------------------------
+2. Colors light mode
+    2.5.7 Card self care
+*/
+
+$light-mode-card-self-care-background-color:                    hsl(38, 71%, 35%);
+$light-mode-card-self-care-hover-background-color:              hsl(38, 71%, 42%);

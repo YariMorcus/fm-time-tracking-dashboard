@@ -99,6 +99,16 @@
     &:hover::after {
       background-color: v.$white;
     }
+
+    &:focus-visible {
+      outline-offset: -0.4rem;
+      border-radius: 1rem;
+
+      @include m.breakpoint-md() {
+        outline-offset: initial;
+        border-radius: 0.5rem;
+      }
+    }
   }
 
   &__time-container {

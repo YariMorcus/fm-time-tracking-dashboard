@@ -1,3 +1,6 @@
+// Forward buttonLightModeToggle file when _index.scss is @used
+@forward 'buttonLightModeToggle';
+
 // Forward card file when _index.scss is @used
 @forward 'card';
 

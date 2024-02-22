@@ -89,10 +89,9 @@ img {
   &__link {
     color: v.$footer-link-text-color;
 
-    // TODO add visited state
-    // &:visited {
-    //   color: v.$light-mode-footer-link-text-color-visited;
-    // }
+    &:visited {
+      color: v.$footer-link-text-color-visited;
+    }
 
     &:hover {
       color: v.$footer-link-text-color-hover;

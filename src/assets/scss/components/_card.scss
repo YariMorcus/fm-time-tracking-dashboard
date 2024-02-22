@@ -279,7 +279,7 @@
 * CSS applies the correct colors for the cards
 */
 
-.light-mode {
+body[light-mode='true'] {
   .card {
     &.work {
       background-color: v.$light-mode-card-work-background-color;

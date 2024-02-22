@@ -135,7 +135,7 @@
 * Styling includes more than colors
 */
 
-.light-mode {
+body[light-mode='true'] {
   .report-for {
     background-color: v.$light-mode-report-for-background-color;
     box-shadow: 1.5rem 3.5rem 5rem -2rem v.$light-mode-report-for-box-shadow-color;

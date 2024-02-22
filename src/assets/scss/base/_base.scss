@@ -129,7 +129,7 @@ img {
 * CSS applies the correct colors for light mode
 */
 
-.light-mode {
+body[light-mode='true'] {
   background-color: v.$light-mode-main-background-color;
 
   button:focus-visible {

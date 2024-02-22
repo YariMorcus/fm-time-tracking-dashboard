@@ -30,7 +30,7 @@
   }
 }
 
-.light-mode {
+body[light-mode='true'] {
   .light-mode-toggle {
     background: v.$light-mode-toggle-button-background-color;
     box-shadow: 0px 3px 5px -1px v.$light-mode-toggle-button-box-shadow-color-1,

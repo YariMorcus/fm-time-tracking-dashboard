@@ -78,7 +78,9 @@ img {
 }
 
 .footer {
+  margin: 0 auto;
   padding: 0 1.28rem 1.28rem;
+  max-width: 20rem;
   font-family: 'Rubik', sans-serif;
   font-size: 1.2rem;
   color: v.$footer-text-color;
@@ -100,6 +102,10 @@ img {
       border-radius: 1px;
       outline: 0.2rem solid v.$footer-link-focus-visible-color;
     }
+  }
+
+  @include m.breakpoint-md() {
+    max-width: initial;
   }
 }
 

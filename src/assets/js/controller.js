@@ -1,9 +1,15 @@
 import LinksView from './Views/LinksView';
 import PlayView from './Views/PlayView';
+import StudyView from './Views/StudyView';
 import workView from './Views/workView';
-import { PLAY_DATA_DATA_INDEX, WORK_DATA_DATA_INDEX } from './config';
+import {
+  PLAY_DATA_DATA_INDEX,
+  STUDY_DATA_DATA_INDEX,
+  WORK_DATA_DATA_INDEX,
+} from './config';
 import * as model from './model';
 
+// TODO refactor code (DRY principal)
 const renderInitialData = async function () {
   // 2. Retrieve and store data from json file
   await model.saveData();
@@ -13,6 +19,9 @@ const renderInitialData = async function () {
 
   // 4. Render given data for play
   PlayView.render(model.state.data[PLAY_DATA_DATA_INDEX]);
+
+  // 5. Render given data for study
+  StudyView.render(model.state.data[STUDY_DATA_DATA_INDEX]);
 };
 
 /**
@@ -33,6 +42,8 @@ const navController = async function navController(button) {
   PlayView.render(model.state.data[PLAY_DATA_DATA_INDEX]);
 
   // 5. Render given data for study
+  StudyView.render(model.state.data[STUDY_DATA_DATA_INDEX]);
+
   // 6. Render given data for exercise
   // 7. Render given data for social
   // 8. Render given data for self care

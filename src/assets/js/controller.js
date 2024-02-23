@@ -3,6 +3,18 @@ import PlayView from './Views/PlayView';
 import workView from './Views/workView';
 import { PLAY_DATA_DATA_INDEX, WORK_DATA_DATA_INDEX } from './config';
 import * as model from './model';
+
+const renderInitialData = async function () {
+  // 2. Retrieve and store data from json file
+  await model.saveData();
+
+  // 3. Render given data for work
+  workView.render(model.state.data[WORK_DATA_DATA_INDEX]);
+
+  // 4. Render given data for play
+  PlayView.render(model.state.data[PLAY_DATA_DATA_INDEX]);
+};
+
 /**
  * Controller provides functionality for the navigation
  */
@@ -27,6 +39,7 @@ const navController = async function navController(button) {
 };
 
 const init = function init() {
+  renderInitialData();
   LinksView.addHandlerClick(navController);
 };
 

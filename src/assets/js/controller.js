@@ -1,11 +1,13 @@
 import ExerciseView from './Views/ExerciseView';
 import LinksView from './Views/LinksView';
 import PlayView from './Views/PlayView';
+import SocialView from './Views/SocialView';
 import StudyView from './Views/StudyView';
 import workView from './Views/workView';
 import {
   EXERCISE_DATA_DATA_INDEX,
   PLAY_DATA_DATA_INDEX,
+  SOCIAL_DATA_DATA_INDEX,
   STUDY_DATA_DATA_INDEX,
   WORK_DATA_DATA_INDEX,
 } from './config';
@@ -50,6 +52,7 @@ const navController = async function navController(button) {
   ExerciseView.render(model.state.data[EXERCISE_DATA_DATA_INDEX]);
 
   // 7. Render given data for social
+  SocialView.render(model.state.data[SOCIAL_DATA_DATA_INDEX]);
   // 8. Render given data for self care
 };
 

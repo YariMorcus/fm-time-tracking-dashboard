@@ -5,7 +5,7 @@ import View from './View';
  * @extends View the parent view (dashboard)
  * @property {Object} parentEl - the report for navigation
  */
-class linksView extends View {
+class LinksView extends View {
   #parentEl = document.querySelector('.report-for__nav');
   #buttons = this.#parentEl.querySelectorAll('.report-for__nav-button');
 
@@ -46,4 +46,4 @@ class linksView extends View {
   }
 }
 
-export default new linksView();
+export default new LinksView();

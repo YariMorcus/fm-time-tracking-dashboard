@@ -10,6 +10,8 @@ const navController = async function navController(button) {
   model.state.curPage = linksView.getPageId(button);
 
   // 2. Retrieve and store data from json file
+  await model.saveData();
+
   // 3. Render given data for work
   // 4. Render given data for play
   // 5. Render given data for study

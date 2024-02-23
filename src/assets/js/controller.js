@@ -28,6 +28,15 @@ const renderInitialData = async function () {
 
   // 5. Render given data for study
   StudyView.render(model.state.data[STUDY_DATA_DATA_INDEX]);
+
+  // 6. Render given data for exercise
+  ExerciseView.render(model.state.data[EXERCISE_DATA_DATA_INDEX]);
+
+  // 7. Render given data for social
+  SocialView.render(model.state.data[SOCIAL_DATA_DATA_INDEX]);
+
+  // 8. Render given data for self care
+  SelfCareView.render(model.state.data[SELF_CARE_DATA_DATA_INDEX]);
 };
 
 /**

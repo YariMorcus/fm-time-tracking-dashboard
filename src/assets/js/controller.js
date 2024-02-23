@@ -1,6 +1,7 @@
-import * as model from './model';
 import LinksView from './Views/LinksView';
-
+import workView from './Views/workView';
+import { WORK_DATA_DATA_INDEX } from './config';
+import * as model from './model';
 /**
  * Controller provides functionality for the navigation
  */
@@ -13,6 +14,7 @@ const navController = async function navController(button) {
   await model.saveData();
 
   // 3. Render given data for work
+  workView.render(model.state.data[WORK_DATA_DATA_INDEX]);
 
   // 4. Render given data for play
   // 5. Render given data for study

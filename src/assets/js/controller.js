@@ -7,6 +7,7 @@ import StudyView from './Views/StudyView';
 import workView from './Views/workView';
 import {
   EXERCISE_DATA_DATA_INDEX,
+  INITIAL_STATS_DATA,
   PLAY_DATA_DATA_INDEX,
   SELF_CARE_DATA_DATA_INDEX,
   SOCIAL_DATA_DATA_INDEX,
@@ -77,7 +78,10 @@ const navController = async function navController(button) {
 };
 
 const init = function init() {
+  // Indicate what initial page is and render initial data
+  LinksView.highlightInitialPage(INITIAL_STATS_DATA);
   renderInitialData();
+
   LinksView.addHandlerClick(navController);
 };
 

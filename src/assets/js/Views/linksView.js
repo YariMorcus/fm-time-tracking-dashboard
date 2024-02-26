@@ -44,6 +44,14 @@ class LinksView extends View {
   getPageId(button) {
     return button.id;
   }
+
+  /**
+   * Indicate to user what initial page is
+   * @param {string} initialPage either daily, weekly or monthly
+   */
+  highlightInitialPage(initialPage) {
+    this.#parentEl.querySelector(`#${initialPage}`).classList.add('is-active');
+  }
 }
 
 export default new LinksView();

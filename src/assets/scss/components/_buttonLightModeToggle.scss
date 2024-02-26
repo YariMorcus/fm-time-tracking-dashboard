@@ -12,6 +12,7 @@
   background: v.$toggle-button-background-color;
   border: none;
   border-radius: 100%;
+  cursor: pointer;
 
   &::after {
     content: '🌓';

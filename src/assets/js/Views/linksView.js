@@ -3,7 +3,7 @@ import View from './View';
 /**
  * @class linksView
  * @extends View the parent view (dashboard)
- * @property {Object} parentEl - the report for navigation
+ * @property {object} parentEl - the report for navigation
  */
 class LinksView extends View {
   #parentEl = document.querySelector('.report-for__nav');

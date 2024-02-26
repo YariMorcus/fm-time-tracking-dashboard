@@ -15,36 +15,35 @@ import {
 } from './config';
 import * as model from './model';
 
-// TODO refactor comments and function (DRY PRINCIPAL)
-const renderInitialData = async function () {
-  // 2. Retrieve and store data from json file
-  await model.saveData();
-
-  // 3. Render given data for work
+/**
+ * Render all components on the dashboard
+ */
+const renderComponents = function () {
+  // Render given data for work
   workView.render(model.state.curPage, model.state.data[WORK_DATA_DATA_INDEX]);
 
-  // 4. Render given data for play
+  // Render given data for play
   PlayView.render(model.state.curPage, model.state.data[PLAY_DATA_DATA_INDEX]);
 
-  // 5. Render given data for study
+  // Render given data for study
   StudyView.render(
     model.state.curPage,
     model.state.data[STUDY_DATA_DATA_INDEX]
   );
 
-  // 6. Render given data for exercise
+  // Render given data for exercise
   ExerciseView.render(
     model.state.curPage,
     model.state.data[EXERCISE_DATA_DATA_INDEX]
   );
 
-  // 7. Render given data for social
+  // Render given data for social
   SocialView.render(
     model.state.curPage,
     model.state.data[SOCIAL_DATA_DATA_INDEX]
   );
 
-  // 8. Render given data for self care
+  // Render given data for self care
   SelfCareView.render(
     model.state.curPage,
     model.state.data[SELF_CARE_DATA_DATA_INDEX]
@@ -52,46 +51,29 @@ const renderInitialData = async function () {
 };
 
 /**
+ * Render initial components
+ */
+const renderInitialData = async function () {
+  // Retrieve and store data from json file
+  await model.saveData();
+
+  // Render all components
+  renderComponents();
+};
+
+/**
  * Controller provides functionality for the navigation
- * TODO refactor comments and function (DRY PRINCIPAL)
  */
 const navController = async function navController(button) {
   // Indicate and save current page
   LinksView.indicateCurrentPage(button);
   model.state.curPage = LinksView.getPageId(button);
 
-  // 2. Retrieve and store data from json file
+  // Retrieve and store data from json file
   await model.saveData();
 
-  // 3. Render given data for work
-  workView.render(model.state.curPage, model.state.data[WORK_DATA_DATA_INDEX]);
-
-  // 4. Render given data for play
-  PlayView.render(model.state.curPage, model.state.data[PLAY_DATA_DATA_INDEX]);
-
-  // 5. Render given data for study
-  StudyView.render(
-    model.state.curPage,
-    model.state.data[STUDY_DATA_DATA_INDEX]
-  );
-
-  // 6. Render given data for exercise
-  ExerciseView.render(
-    model.state.curPage,
-    model.state.data[EXERCISE_DATA_DATA_INDEX]
-  );
-
-  // 7. Render given data for social
-  SocialView.render(
-    model.state.curPage,
-    model.state.data[SOCIAL_DATA_DATA_INDEX]
-  );
-
-  // 8. Render given data for self care
-  SelfCareView.render(
-    model.state.curPage,
-    model.state.data[SELF_CARE_DATA_DATA_INDEX]
-  );
+  // Render all components
+  renderComponents();
 };
 
 const init = function init() {

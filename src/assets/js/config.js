@@ -1,7 +1,7 @@
 // Project configuration
 
 // Change string to indicate which stats have to be initially shown
-// possible values: daily, weekly, monthly
+// possible values: daily, weekly, monthly (lowercase)
 export const INITIAL_STATS_DATA = 'daily';
 
 // DO NOT CHANGE VALUES BELOW (applies to all code underneath this line)

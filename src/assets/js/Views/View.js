@@ -21,7 +21,7 @@ export default class View {
 
   /**
    * Generate markup for given view
-   * @this {Object} PlayView instance
+   * @this {Object}  View instance that method is called upon (PlayView e.g.)
    * @returns {string} the HTML markup
    */
   #generateMarkup() {

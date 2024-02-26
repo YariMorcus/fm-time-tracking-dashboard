@@ -1,3 +1,4 @@
+import DarkModeToggleButtonView from './Views/DarkModeToggleButtonView';
 import ExerciseView from './Views/ExerciseView';
 import LinksView from './Views/LinksView';
 import PlayView from './Views/PlayView';
@@ -77,12 +78,21 @@ const navController = async function navController(button) {
   renderComponents();
 };
 
+/**
+ * Controller provides functionality for the dark mode functionality
+ */
+const darkModeController = function () {
+  DarkModeToggleButtonView.toggleDarkMode();
+};
+
 const init = function init() {
   // Indicate what initial page is and render initial data
   LinksView.highlightInitialPage(INITIAL_STATS_DATA);
   renderInitialData();
 
   LinksView.addHandlerClick(navController);
+
+  DarkModeToggleButtonView.addHandlerClick(darkModeController);
 };
 
 init();

@@ -1,4 +1,10 @@
 // Project configuration
+
+// Change string to indicate which stats have to be initially shown
+// possible values: daily, weekly, monthly
+export const INITIAL_STATS_DATA = 'daily';
+
+// DO NOT CHANGE VALUES BELOW (applies to all code underneath this line)
 export const WORK_DATA_DATA_INDEX = 0;
 export const PLAY_DATA_DATA_INDEX = 1;
 export const STUDY_DATA_DATA_INDEX = 2;

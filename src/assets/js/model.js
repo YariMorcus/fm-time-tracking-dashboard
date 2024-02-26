@@ -1,7 +1,7 @@
 import data from '../data/time-trackings.json';
-
+import { INITIAL_STATS_DATA } from './config';
 export const state = {
-  curPage: 'daily', // standard page
+  curPage: INITIAL_STATS_DATA, // standard page
   data: null,
 };
 

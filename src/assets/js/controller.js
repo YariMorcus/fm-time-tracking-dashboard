@@ -21,22 +21,34 @@ const renderInitialData = async function () {
   await model.saveData();
 
   // 3. Render given data for work
-  workView.render(model.state.data[WORK_DATA_DATA_INDEX]);
+  workView.render(model.state.curPage, model.state.data[WORK_DATA_DATA_INDEX]);
 
   // 4. Render given data for play
-  PlayView.render(model.state.data[PLAY_DATA_DATA_INDEX]);
+  PlayView.render(model.state.curPage, model.state.data[PLAY_DATA_DATA_INDEX]);
 
   // 5. Render given data for study
-  StudyView.render(model.state.data[STUDY_DATA_DATA_INDEX]);
+  StudyView.render(
+    model.state.curPage,
+    model.state.data[STUDY_DATA_DATA_INDEX]
+  );
 
   // 6. Render given data for exercise
-  ExerciseView.render(model.state.data[EXERCISE_DATA_DATA_INDEX]);
+  ExerciseView.render(
+    model.state.curPage,
+    model.state.data[EXERCISE_DATA_DATA_INDEX]
+  );
 
   // 7. Render given data for social
-  SocialView.render(model.state.data[SOCIAL_DATA_DATA_INDEX]);
+  SocialView.render(
+    model.state.curPage,
+    model.state.data[SOCIAL_DATA_DATA_INDEX]
+  );
 
   // 8. Render given data for self care
-  SelfCareView.render(model.state.data[SELF_CARE_DATA_DATA_INDEX]);
+  SelfCareView.render(
+    model.state.curPage,
+    model.state.data[SELF_CARE_DATA_DATA_INDEX]
+  );
 };
 
 /**
@@ -52,22 +64,34 @@ const navController = async function navController(button) {
   await model.saveData();
 
   // 3. Render given data for work
-  workView.render(model.state.data[WORK_DATA_DATA_INDEX]);
+  workView.render(model.state.curPage, model.state.data[WORK_DATA_DATA_INDEX]);
 
   // 4. Render given data for play
-  PlayView.render(model.state.data[PLAY_DATA_DATA_INDEX]);
+  PlayView.render(model.state.curPage, model.state.data[PLAY_DATA_DATA_INDEX]);
 
   // 5. Render given data for study
-  StudyView.render(model.state.data[STUDY_DATA_DATA_INDEX]);
+  StudyView.render(
+    model.state.curPage,
+    model.state.data[STUDY_DATA_DATA_INDEX]
+  );
 
   // 6. Render given data for exercise
-  ExerciseView.render(model.state.data[EXERCISE_DATA_DATA_INDEX]);
+  ExerciseView.render(
+    model.state.curPage,
+    model.state.data[EXERCISE_DATA_DATA_INDEX]
+  );
 
   // 7. Render given data for social
-  SocialView.render(model.state.data[SOCIAL_DATA_DATA_INDEX]);
+  SocialView.render(
+    model.state.curPage,
+    model.state.data[SOCIAL_DATA_DATA_INDEX]
+  );
 
   // 8. Render given data for self care
-  SelfCareView.render(model.state.data[SELF_CARE_DATA_DATA_INDEX]);
+  SelfCareView.render(
+    model.state.curPage,
+    model.state.data[SELF_CARE_DATA_DATA_INDEX]
+  );
 };
 
 const init = function init() {

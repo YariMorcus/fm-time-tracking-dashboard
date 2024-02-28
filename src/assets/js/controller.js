@@ -1,11 +1,11 @@
-import ExerciseView from './Views/ExerciseView';
-import LinksView from './Views/LinksView';
-import PlayView from './Views/PlayView';
-import SelfCareView from './Views/SelfCareView';
-import SocialView from './Views/SocialView';
-import StudyView from './Views/StudyView';
-import ToggleButtonView from './Views/ToggleButtonView';
-import WorkView from './Views/WorkView';
+import ExerciseView from './Views/exerciseView';
+import LinksView from './Views/linksView';
+import PlayView from './Views/playView';
+import SelfCareView from './Views/selfCareView';
+import SocialView from './Views/socialView';
+import StudyView from './Views/studyView';
+import ToggleButtonView from './Views/toggleButtonView';
+import WorkView from './Views/workView';
 import {
   EXERCISE_DATA_DATA_INDEX,
   INITIAL_STATS_DATA,

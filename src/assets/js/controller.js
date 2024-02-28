@@ -4,8 +4,8 @@ import PlayView from './Views/PlayView';
 import SelfCareView from './Views/SelfCareView';
 import SocialView from './Views/SocialView';
 import StudyView from './Views/StudyView';
-import toggleButtonView from './Views/toggleButtonView';
-import workView from './Views/workView';
+import ToggleButtonView from './Views/ToggleButtonView';
+import WorkView from './Views/WorkView';
 import {
   EXERCISE_DATA_DATA_INDEX,
   INITIAL_STATS_DATA,
@@ -22,7 +22,7 @@ import * as model from './model';
  */
 const renderComponents = function () {
   // Render given data for work
-  workView.render(model.state.curPage, model.state.data[WORK_DATA_DATA_INDEX]);
+  WorkView.render(model.state.curPage, model.state.data[WORK_DATA_DATA_INDEX]);
 
   // Render given data for play
   PlayView.render(model.state.curPage, model.state.data[PLAY_DATA_DATA_INDEX]);
@@ -82,11 +82,11 @@ const navController = async function navController(button) {
  * Controller provides functionality for the light and dark mode functionality
  */
 const ModeController = function () {
-  toggleButtonView.toggleMode();
+  ToggleButtonView.toggleMode();
 
-  toggleButtonView.changeAriaTextLabel();
+  ToggleButtonView.changeAriaTextLabel();
 
-  toggleButtonView.saveCurrentMode();
+  ToggleButtonView.saveCurrentMode();
 };
 
 /**
@@ -94,9 +94,9 @@ const ModeController = function () {
  * Controller is only called when light-mode cookie is true
  */
 const lightModeController = function () {
-  toggleButtonView.toggleMode();
+  ToggleButtonView.toggleMode();
 
-  toggleButtonView.changeAriaTextLabel();
+  ToggleButtonView.changeAriaTextLabel();
 };
 
 const init = function init() {
@@ -106,10 +106,10 @@ const init = function init() {
 
   // Attach event listeners
   LinksView.addHandlerClick(navController);
-  toggleButtonView.addHandlerClick(ModeController);
+  ToggleButtonView.addHandlerClick(ModeController);
 
   // If light-mode cookie is true, activate light mode automatically
-  if (toggleButtonView.isLightModeActive()) {
+  if (ToggleButtonView.isLightModeActive()) {
     lightModeController();
   }
 };

@@ -84,7 +84,7 @@ const navController = async function navController(button) {
 const ModeController = function () {
   toggleButtonView.toggleMode();
 
-  // toggleButtonView.changeAriaTextLabel();
+  toggleButtonView.changeAriaTextLabel();
 
   toggleButtonView.saveCurrentMode();
 };
@@ -96,7 +96,7 @@ const ModeController = function () {
 const lightModeController = function () {
   toggleButtonView.toggleMode();
 
-  // toggleButtonView.changeAriaTextLabel();
+  toggleButtonView.changeAriaTextLabel();
 };
 
 const init = function init() {

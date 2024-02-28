@@ -31,7 +31,7 @@ _Source: [time tracking dashboard challenge on Frontend Mentor](https://www.fron
 
 ## Deployment status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/28e34282-187e-41ed-984e-575aab63609f/deploy-status)](https://app.netlify.com/sites/time-tracking-dashboard-yari-morcus/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1c3948df-490d-403a-894a-e00bb1169706/deploy-status)](https://app.netlify.com/sites/time-tracking-dashboard-yari-morcus/deploys)
 
 ## Overview
 

@@ -42,17 +42,15 @@ class toggleButtonView extends View {
   }
 
   /**
-   * Save user choice of light or dark mode
+   * Save current mode by using a cookie
    */
   saveCurrentMode() {
-    // if (!bool) return (document.cookie = `lightmode=false; Secure`);
-    // If light mode is active, indicate user has
-    // enabled dark mode again
+    // Indicate that dark mode is active again
     if (this.isLightModeActive()) {
-      document.cookie = 'lightmode=false; Secure';
+      document.cookie = 'light-mode=false; Secure';
       return;
     }
-    document.cookie = `lightmode=true; Secure`;
+    document.cookie = `light-mode=true; Secure`;
   }
 
   /**
@@ -61,7 +59,7 @@ class toggleButtonView extends View {
    */
   isLightModeActive() {
     return document.cookie.split(';').some(cookie => {
-      return cookie.includes('lightmode=true');
+      return cookie.includes('light-mode=true');
     });
   }
 }

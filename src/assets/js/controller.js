@@ -79,18 +79,24 @@ const navController = async function navController(button) {
 };
 
 /**
- * Controller provides functionality for the dark mode functionality
+ * Controller provides functionality for the light and dark mode functionality
  */
-// TODO refactor code
-const darkModeController = function () {
+const ModeController = function () {
   toggleButtonView.toggleMode();
+
+  // toggleButtonView.changeAriaTextLabel();
 
   toggleButtonView.saveCurrentMode();
 };
 
-// TODO refactor code
+/**
+ * Controller provides automatic trigger of light mode
+ * Controller is only called when light-mode cookie is true
+ */
 const lightModeController = function () {
   toggleButtonView.toggleMode();
+
+  // toggleButtonView.changeAriaTextLabel();
 };
 
 const init = function init() {
@@ -98,13 +104,12 @@ const init = function init() {
   LinksView.highlightInitialPage(INITIAL_STATS_DATA);
   renderInitialData();
 
+  // Attach event listeners
   LinksView.addHandlerClick(navController);
+  toggleButtonView.addHandlerClick(ModeController);
 
-  toggleButtonView.addHandlerClick(darkModeController);
-
-  // TODO refactor code
+  // If light-mode cookie is true, activate light mode automatically
   if (toggleButtonView.isLightModeActive()) {
-    console.log(`User enabled light mode before`, document.cookie);
     lightModeController();
   }
 };

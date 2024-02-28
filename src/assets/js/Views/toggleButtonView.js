@@ -1,12 +1,12 @@
 import View from './View';
 
 /**
- * @class DarkModeToggleButtonView
+ * @class toggleButtonView
  * @extends View the parent view (dashboard)
  * @property {HTMLElement} bodyEl - the body element
  * @property {Element} parentEl - the dark/light mode toggle button
  */
-class DarkModeToggleButtonView extends View {
+class toggleButtonView extends View {
   #bodyEl = document.body;
   #parentEl = document.querySelector('#js-light-mode-toggle');
 
@@ -23,26 +23,47 @@ class DarkModeToggleButtonView extends View {
   /**
    * Toggle dark mode based on current value of light-mode attr on body
    */
-  toggleDarkMode() {
+  toggleMode() {
     const toggle =
       this.#bodyEl.getAttribute('light-mode') === 'false' ? true : false;
 
     this.#bodyEl.setAttribute('light-mode', toggle);
-
-    // Change aria text label
-    this.#changeAriaTextLabel();
   }
 
   /**
    * Toggle aria text label based on current value of light-mode attr on body
    */
-  #changeAriaTextLabel() {
+  changeAriaTextLabel() {
     const currentMode = this.#bodyEl.getAttribute('light-mode');
     const ariaTextLabel =
       currentMode === 'true' ? 'Toggle dark mode' : 'Toggle light mode';
 
     this.#parentEl.setAttribute('aria-label', ariaTextLabel);
   }
+
+  /**
+   * Save user choice of light or dark mode
+   */
+  saveCurrentMode() {
+    // if (!bool) return (document.cookie = `lightmode=false; Secure`);
+    // If light mode is active, indicate user has
+    // enabled dark mode again
+    if (this.isLightModeActive()) {
+      document.cookie = 'lightmode=false; Secure';
+      return;
+    }
+    document.cookie = `lightmode=true; Secure`;
+  }
+
+  /**
+   * Check whether light mode is active or not
+   * @returns {boolean} true if light mode is active, false otherwise
+   */
+  isLightModeActive() {
+    return document.cookie.split(';').some(cookie => {
+      return cookie.includes('lightmode=true');
+    });
+  }
 }
 
-export default new DarkModeToggleButtonView();
+export default new toggleButtonView();

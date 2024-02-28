@@ -1,10 +1,10 @@
-import DarkModeToggleButtonView from './Views/DarkModeToggleButtonView';
 import ExerciseView from './Views/ExerciseView';
 import LinksView from './Views/LinksView';
 import PlayView from './Views/PlayView';
 import SelfCareView from './Views/SelfCareView';
 import SocialView from './Views/SocialView';
 import StudyView from './Views/StudyView';
+import toggleButtonView from './Views/toggleButtonView';
 import workView from './Views/workView';
 import {
   EXERCISE_DATA_DATA_INDEX,
@@ -81,8 +81,16 @@ const navController = async function navController(button) {
 /**
  * Controller provides functionality for the dark mode functionality
  */
+// TODO refactor code
 const darkModeController = function () {
-  DarkModeToggleButtonView.toggleDarkMode();
+  toggleButtonView.toggleMode();
+
+  toggleButtonView.saveCurrentMode();
+};
+
+// TODO refactor code
+const lightModeController = function () {
+  toggleButtonView.toggleMode();
 };
 
 const init = function init() {
@@ -92,7 +100,13 @@ const init = function init() {
 
   LinksView.addHandlerClick(navController);
 
-  DarkModeToggleButtonView.addHandlerClick(darkModeController);
+  toggleButtonView.addHandlerClick(darkModeController);
+
+  // TODO refactor code
+  if (toggleButtonView.isLightModeActive()) {
+    console.log(`User enabled light mode before`, document.cookie);
+    lightModeController();
+  }
 };
 
 init();

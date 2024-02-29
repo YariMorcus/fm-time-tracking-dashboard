@@ -74,6 +74,7 @@
   }
 
   &__name {
+    display: block;
     grid-area: report-name;
     align-self: start;
     color: v.$white;

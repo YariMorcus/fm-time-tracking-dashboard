@@ -6,7 +6,7 @@ import View from './View';
  * @extends View - the parent view
  */
 class PlayView extends View {
-  _parentEl = document.querySelector('.play');
+  _parentEl = document.querySelector('#js-play');
 }
 
 export default new PlayView();

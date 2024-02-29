@@ -6,7 +6,7 @@ import View from './View';
  * @extends View - the parent view
  */
 class SelfCareView extends View {
-  _parentEl = document.querySelector('.self-care');
+  _parentEl = document.querySelector('#js-self-care');
 }
 
 export default new SelfCareView();

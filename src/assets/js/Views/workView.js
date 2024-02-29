@@ -6,7 +6,7 @@ import View from './View';
  * @extends View - the parent view
  */
 class WorkView extends View {
-  _parentEl = document.querySelector('.work');
+  _parentEl = document.querySelector('#js-work');
 }
 
 export default new WorkView();

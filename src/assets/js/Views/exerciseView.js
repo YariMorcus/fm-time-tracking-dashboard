@@ -6,7 +6,7 @@ import View from './View';
  * @extends View - the parent view
  */
 class ExerciseView extends View {
-  _parentEl = document.querySelector('.exercise');
+  _parentEl = document.querySelector('#js-exercise');
 }
 
 export default new ExerciseView();

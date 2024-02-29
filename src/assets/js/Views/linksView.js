@@ -6,8 +6,8 @@ import View from './View';
  * @property {object} parentEl - the report for navigation
  */
 class LinksView extends View {
-  #parentEl = document.querySelector('.report-for__nav');
-  #buttons = this.#parentEl.querySelectorAll('.report-for__nav-button');
+  #parentEl = document.querySelector('.js-report-for__nav');
+  #buttons = this.#parentEl.querySelectorAll('.js-report-for__nav-button');
 
   /**
    * Listen for submit event on linksView parent element
@@ -15,7 +15,7 @@ class LinksView extends View {
    */
   addHandlerClick(handler) {
     this.#parentEl.addEventListener('click', e => {
-      const button = e.target.classList.contains('report-for__nav-button');
+      const button = e.target.classList.contains('js-report-for__nav-button');
 
       if (!button) return;
 

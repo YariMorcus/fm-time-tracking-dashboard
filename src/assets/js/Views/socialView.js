@@ -6,7 +6,7 @@ import View from './View';
  * @extends View - the parent view
  */
 class SocialView extends View {
-  _parentEl = document.querySelector('.social');
+  _parentEl = document.querySelector('#js-social');
 }
 
 export default new SocialView();

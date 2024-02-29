@@ -6,7 +6,7 @@ import View from './View';
  * @extends View - the parent view
  */
 class StudyView extends View {
-  _parentEl = document.querySelector('.study');
+  _parentEl = document.querySelector('#js-study');
 }
 
 export default new StudyView();
